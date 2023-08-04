@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <title> ZiZo Home Page </title>
+        <style>
+            body
+            {margin:0 auto;}
+            .container
+            {width: 1170px;margin: auto;}
+            .header .slider
+            {background-image:url('view.jpg');background-size:cover;height:550px;}
+            .header .slider .intro 
+            {padding-top:200px;text-align:center;color:#FFDEAD;}
+            .header .slider .intro h2
+            {margin:0 auto;font-size:50px;width:700px;border-top:4px solid #FFDEAD;border-bottom:4px solid #FFDEAD;padding:5px 0;}
+            .header .slider .intro button
+            {background:none;margin-top:30px;font-size:20px;border:2px solid #FFF;font-weight:bold;padding:9px 30px;cursor:pointer;}
+            .header .slider .intro button:hover
+            { border:2px solid Black; color:black;}
+            .header .navbar
+            {background-color:#252F31;}
+            span
+            {color: chartreuse;}
+            .header .navbar h2 
+            {text-transform:uppercase;}
+            .header .navbar h2 span 
+            {color:#2ecc71;}
+            .header .navbar ul 
+            {list-style:none;padding-left:0;}
+            .header .navbar ul li 
+            {padding:10px;}
+            .header .navbar ul li a
+            {text-decoration:none;}
+            .header .navbar ul li#active a,
+            .header .navbar ul li a:hover{color:#30B576;}
+            .features
+            {padding-top:40px;padding-bottom:50px;}
+            .features .feat
+            {width:33.33333%;height:150px;}
+            .features .feat p
+            {line-height:1.7;color:#999;}
+            .about-us
+            {background-color:#F2F2F2;}
+            .about-us .image
+            {width:40%;height:40%;}              
+            .about-us .image img
+            {width:100%;height:100%}
+            .about-us .info
+            {width:60%;height:60%;}
+            .about-us .info h2
+            {margin:40px 0 20px 40px;}
+            .about-us .info > p
+            {margin:0 0 10px 40px;}
+            .about-us .info p:last-of-type
+            {margin-top:30px;}
+            .about-us .info .hobbies
+            {margin: 20px;}
+            .about-us .info .hobbies .content
+            {margin-top:10px;margin-bottom:10px;margin-left:11px;min-height:100px;}
+            .about-us .info .hobbies .content .icon
+            {width:12%;margin-right:5%;}
+            .about-us .info .hobbies .content .icon img
+            {max-width:100%;margin:20px 10px 0 0;}
+            .about-us .info .hobbies .content .icon img:hover{border-radius: 50%;box-shadow:7px 7px 20px #CCC;}
+            .about-us .info .hobbies .content .text
+            {width:83%;}
+            .about-us .info .hobbies .content .text p{margin-top:0;}
+            .about-us .info .hobbies .content .text p:hover{color:dodgerblue;}
+            .about-us .info .hobbies .content .text h3{margin-bottom:5px;}
+            .about-us .info .hobbies .content .text h3:hover{color:deeppink;}
+            .my-skills .info .hobbies
+            {margin:20px;}
+            .my-skills .info .hobbies .content 
+            {width:50%;min-height:100px;}
+            .my-skills .info .hobbies .content .icon
+            {width:12%;margin-right:5%;}
+            .my-skills .info .hobbies .content .icon img
+            {max-width:100%;margin:10px 10px 0 0;}
+            .my-skills .info .hobbies .content .icon img:hover{max-width:200%;}
+            .my-skills .info .hobbies .content .text
+            {width:83%;}
+            .my-skills .info .hobbies .content .text p{margin-top:0;}
+            .my-skills .info .hobbies .content .text p:hover
+            {color:fuchsia;}
+            .my-skills .info .hobbies .content .text h3{margin-bottom:5px;}
+            .my-skills .info .hobbies .content .text h3:hover
+            {color:darkorange;}
+            .my-skills
+            {padding-top:30px;padding-bottom:30px;}
+            .my-skills .skills
+            {width:50%;}
+            .my-skills .skills h2
+            {margin:25px 0 20px 40px;}
+            .my-skills .skills p,
+            .my-skills .skills .list
+            {margin:0 0 10px 40px;line-height:1.6;}
+            .my-skills .skills p:last-of-type
+            {margin-top:25px;}
+            .my-skills .skills .list
+            {list-style:inside;}
+            .my-skills .skills .list ul li:hover
+            {list-style:square;color:black;}
+            .my-skills .skills button
+            {background:none;border:3px solid #87CEFA;padding:10px 30px;margin-top:40px;margin-left:180px;color:#87CEFA;font-weight:bold;cursor:pointer;}
+            .my-skills .skills button:hover
+            {color:blue;border:3px solid blue;}
+            .regist
+            {text-align:center;background-color:#F2F2F2;padding-top:50px;padding-bottom:70px;}
+            .regist h2
+            {font-weight:Bold;}
+            .regist h2:hover
+            {color:forestgreen;}
+            .regist p
+            {line-height:1.7;padding:0 40px;}
+            .regist p:hover
+            {color:cyan;}
+            .regist button
+            {background:none;border:3px solid #87CEFA;padding:10px 30px;color:#87CEFA;font-weight:bold;margin-top:15px;cursor:pointer;}
+            .regist button:hover
+            {color:blue;border:3px solid blue;}
+            .testimonials
+            {text-align:center;background-color:#F0FFF0;padding-top:50px;padding-bottom:50px;}
+            .testimonials q
+            {font:italic bold 18px/1.8 Arial, tahoma;color:#888;}
+            .testimonials h3
+            {color:black;font-weight:bold;margin-bottom:30px;}
+            .testimonials ul
+            {list-style:none;padding-left:0;text-align:center;}
+            .testimonials ul li
+            {width:15px;height:15px;border:2px solid #87CEFA;display:inline-block;cursor:pointer;}
+            .testimonials ul li.active,
+            .testimonials ul li:hover
+            {background-color:#87CEFA;}
+            .contact-me
+            {background-color:#252F31;padding-top:50px;padding-bottom:70px;}
+            .contact-me .info
+            {width:50%;margin-right:5%;}
+            .contact-me h2
+            { margin-left:40px;}
+            .contact-me p
+            {margin-left:40px; line-height:1.7;}
+            .contact-me p strong
+            {color:#D1D6DA;}
+            .contact-me .form 
+            {width:45%;}
+            .contact-me .form label
+            {display:block;color:#D1D6DA;margin:10px 0;}
+            .contact-me .form textarea
+            {height:100px;}
+            .contact-me .form input[type="submit"]
+            {background-color:#191E22;padding:10px 20px;border:0;margin-top:10px;}
+            .contact-me .form input[type="submit"]:hover
+            {cursor:pointer;}
+            .footer
+            {background-color:#191E22;padding:20px 0;text-align:center;}
+            .footer ul
+            {list-style:none;padding-left:0;margin:0;}
+            /* my framework */
+            .le-left{float:left;}
+            .r-right{float:right;}
+            .inline{display:inline-block;}
+            .co-color{color:#6A6E71;}
+            .input{background-color:#4B5557;color:#FFF;padding:10px;border:0;width:80%;margin-bottom:10px;}
+            .w-color{color:#FFF;}
+            .h-over{overflow:hidden;}
+            .color6{color:#666;}
+            .color5{color:#555;}
+            .hcolor{line-height:1.6;color:#666;}
+
+        </style>
+        <script>
+        </script>
+    </head>
+    <body id="Home">
+        <div class="header"> 
+            <div class="slider">
+                <div class="container">
+                    <div class="intro">
+                        <h2> Welcome To ZiZo Travel's page </h2>
+                       <a href="sign%20in%20projee.html" target="_blank"> <button class="w-color"> Sign in </button></a>
+                    </div>
+                </div>
+            </div>
+            <div class ="navbar w-color h-over">
+                <div class="container">
+                    <h2 class="le-left"> Zi<span> Zo</span></h2>
+                    <ul class="r-right h-over">
+                        <li class="le-left" id="active"><a href="#Home" class="w-color"> Home </a></li>
+                        <li class="le-left"><a href="sign%20up%20projee.html" target="_blank" class="w-color"> Regist </a></li>
+                        <li class="le-left"><a href="#Travel" class="w-color"> Our Travels </a></li>
+                        <li class="le-left"><a href="#contact" class="w-color"> Contact Us </a></li>
+                        <li class="le-left"><a href="#about" class="w-color"> About Us </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="features h-over">
+            <div class="container">
+                <div class="feat le-left">
+                    <h2 class="color5"> Paris </h2>
+                    <p>paris is the capital and most populous city in France The centre of Paris contains the most visited monuments in the city, including the Notre Dame Cathedral and the Louvre as well as the Sainte-Chapelle; Les Invalides, where the tomb of Napoleon is located.</p>
+                </div>
+                <div class="feat le-left">
+                    <h2 class="color5"> NewYourk </h2>
+                    <p>The City of New York, often called New York City New York City has been described as the cultural capital of the world by the diplomatic consulates of Iceland and Latvia and by New York's Baruch College.</p>
+                </div>
+                 <div class="feat le-left">
+                    <h2 class="color5"> Berlin </h2>
+                    <p>Berlin is the capital and the largest city of Germany, as well as one of its 16 constituent states.Berlin is known for its numerous cultural institutions, many of which enjoy international reputation. The diversity and vivacity of the metropolis led to a trendsetting atmosphere.</p>
+                </div>
+            </div>
+        </div>
+        <div class="about-us h-over">
+            <div class= "container">
+                <div class="image le-left">.
+                    <img src="ZiZoo.jpg" alt="Hi That's Me" height="50" width="50">    
+                </div>
+                <div class="info le-left" id="about">
+                    <h2 class="color5"> About me </h2>
+                    <p class="hcolor">Hello, i'm Ziyad Ahmed Hamed, a student at Mansoura University, Faculty of Computing and Information, Department of Software Engineering, i'm 19 years, i was born in Belqas city of Dakahlia province, i'm just started studing at the faculty this year and, i hope that in one day maybe i'm going to be a professor in this great college.</p>
+                    <p class="hcolor"> But in this days i'm studing and working on Web and Develper design, so this humble web site page you can say it's my first complete jop in this new jop i hope that you will like it as me :D at the end all thanks and respected for all my professors and teachers ♥</p>
+                    <div class="hobbies h-over">
+                        <div class="content le-left h-over">
+                            <div class="icon le-left">
+                                <img src="web.ico" alt="">
+                            </div>
+                            <div class="text le-left">    
+                                <h3 class="color5"> Web Design </h3>
+                                <p class="hcolor">i'm started know about web desgin when i were 16 years old and this was an intersted field to me so i'm learned HTML5 CSS3</p>
+                            </div>
+                        </div>
+                        <div class="content le-left h-over">
+                            <div class="icon le-left">
+                                <img src="Graphic.ico" alt="">
+                            </div>
+                            <div class="text le-left">    
+                                <h3 class="color5"> Graphic Desgin </h3>
+                                <p class="hcolor">When i'm were 17 i know every thing about ADOB cuz in this year i wanna to be a graphic desginer but whatever i fail in it cuz i hate the art </p>
+                            </div>
+                        </div>
+                        <div class="content le-left h-over">
+                            <div class="icon le-left">
+                                <img src="marketing.ico" alt="">
+                            </div>
+                            <div class="text le-left">    
+                                <h3 class="color5"> Online Marketing </h3>
+                                <p class="hcolor"> when i'm reached 15 years i hear about that campony you can gain money when you just buy any thing from it and invite anyone to buy any thing he wanna , if you do it you can easly gain money </p>
+                            </div>
+                        </div>
+                        <div class="content le-left h-over">
+                            <div class="icon le-left">
+                                <img src="games.ico" alt="">
+                            </div>
+                            <div class="text le-left">    
+                                <h3 class="color5"> Online Games </h3>
+                                <p class="hcolor">at 10years old till now i'm still playing and trying to search for any Loose protection to Hack it , anyway i'm intersting when i'm playing these online games </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-skills h-over">
+            <div class="container">
+                <div class="skills  le-left">
+                    <h2 class="color5">My Skills</h2>
+                    <p class="color6"> I can manage the time very much as well as i can work under pressure is important that work,i also have many communication skills and can communicate beautifully, and my time is often used for work to accomplish the largest amount of work simply because I like to work in those areas I like <b>:</b></p>
+                    <div class="list color6">
+                        <ul>
+                            <li> Tour establishment and management </li>
+                            <li> Problem solving </li>
+                            <li> Application programming </li>
+                            <li> Web Desgin </li>
+                            <li> Software and Hardware Engineering </li>
+                        </ul>
+                    </div>
+                        <a href="#contact"> <button> Contact Me </button> </a>
+                </div>
+                <div class="info">
+                    <div class="hobbies h-over" id="Travel">
+                        <div class="content le-left h-over">
+                            <div class="icon le-left">
+                                <img src="egy.ico" alt="">
+                            </div>
+                            <div class="text le-left"><h3 class="color5"> Egypt </h3>
+                                <p>The Great Pyramid of Giza (also known as the Pyramid of Khufu or the Pyramid of Cheops) is the oldest and largest of the three pyramids in the Giza pyramid complex bordering what is now El Giza, Egypt. It is the oldest of the Seven Wonders of the Ancient World,</p>
+                            </div>
+                        </div>
+                        <div class="content le-left h-over">
+                            <div class="icon le-left">
+                                <img src="Roma.ico" alt="">
+                            </div>
+                            <div class="text le-left"><h3 class="color5"> Roma </h3>
+                                <p>The Colosseum or Coliseum, also known as the Flavian Amphitheatre (Latin: Amphitheatrum Flavium; Italian: Anfiteatro Flavio or Colosseo, is an oval amphitheatre in the centre of the city of Rome, Italy. Built of travertine, tuff, and brick-faced concrete.</p>
+                            </div>
+                        </div>
+                        <div class="content le-left h-over">
+                            <div class="icon le-left">
+                                <img src="paris.ico" alt="">
+                            </div>
+                            <div class="text le-left"><h3 class="color5"> Paris </h3>
+                                <p>The Eiffel Tower; French: tour Eiffel is a wrought iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower. Constructed from 1887–89 as the entrance to the 1889 World's Fair.</p>
+                            </div>
+                        </div>
+                        <div class="content le-left h-over">
+                            <div class="icon le-left">
+                                <img src="amirca.ico" alt="">
+                            </div>
+                            <div class="text le-left"><h3 class="color5"> Amirca </h3>
+                                <p>The Statue of Liberty (Liberty Enlightening the World; French) is a colossal neoclassical sculpture on Liberty Island in New York Harbor in New York City, in the United States. The copper statue, a gift from the people of France to the people of the United States.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="regist">
+            <div class="container">
+                <h2 class="color5"> Why regist ? </h2>
+                <p class="color6"> If you regist now you will have 20% discount for any travel in one week, if you rgist in our website you will have 5% discount for any travel you will go in, finally we post offers on this website and you can join if you regist </p>
+                <a href="sign%20up%20projee.html" target="_blank"><button>  Let in now </button></a>
+            </div>
+        </div>
+        <div class="testimonials">
+            <div class="container">
+                <q> I remeber first time i'm planing to travel to Alex i were 12 years and on those days my dad book on ZiZo Travels and this travels was a great experiment i hope you all will try it one day. </q>
+                <h3> Omar Hamed </h3>
+                <ul>
+                    <li></li>
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <div class="contact-me h-over" id="contact">
+            <div class="container">
+                <div class="info  le-left">
+                    <h2 class="w-color"> Contact Me </h2>
+                    <p class="co-color"> if you wanna to book any travel you wanna or contact me on anyway you will find all you need at the end of this paragraphe or on the last bar in this page. </p>
+                    <p class="co-color">17 Ahmed Shawky Street's<br>Khatap Square<br>Belqas</p>
+                    <p class="co-color">
+                        <strong> Email : </strong> Ziyad_hamed74@yahoo.com<br> <strong> Phone : </strong> 010 30 31 42 43  
+                    </p>
+                </div>
+                <form class="form  le-left">
+                    <label> Name </label>
+                    <input type="text" class="input">
+                    <label> Phone </label>
+                    <input type="text" class="input">
+                    <label> E-mail address </label>
+                    <input type="email" class="input">
+                    <label> Message </label>
+                    <textarea class="input"></textarea>
+                    <input type="submit" value="Contact Me" class="w-color">
+                </form>
+            </div>
+        </div>
+        <div class="footer co-color h-over">
+            <div class="container">
+                <span class="le-left co-color">Copyright &copy; 2018 ZiZo Inc.</span>
+                <ul class="r-right">
+                    <li class="inline"><a href="facepage.html" target="_blank">
+                        <img src="face.ico" alt="FaceBookIcon" width="24px"></a> </li>
+                    <li class="inline"><a href="https://twitter.com/ziyad_hamed" target="_blank">
+                        <img src="twitter.ico" alt="TwiteerIcon" width="24px"></a> </li>
+                    <li class="inline"><a href="https://www.instagram.com/ziyad.hamed/" target="_blank"> 
+                        <img src="insta.ico" alt="InstaIcon" width="24px"></a> </li>
+                    <li class="inline"><a href="https://mail.yahoo.com/ziyad_hamed74" target="_blank"> 
+                        <img src="yahoo.ico" alt="YahooIcon" width="24px"></a> </li>
+                    <li class="inline"><a href="https://plus.google.com/u/0/101896966769340873732" target="_blank">
+                        <img src="gmail.ico" alt="GmailIcon" width="24px"></a> </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
